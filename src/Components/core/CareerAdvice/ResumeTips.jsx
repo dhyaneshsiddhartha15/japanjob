@@ -1,86 +1,88 @@
 import React from 'react';
 
 export const ResumeTips = () => {
-  const tips = [
-    {
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          className="w-6 h-6"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M12 14l9-5-9-5-9 5 9 5z"
-          />
-        </svg>
-      ),
-      title: 'Tip 1',
-      description: 'Description for Tip 1',
-    },
-    {
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          className="w-6 h-6"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M12 14l9-5-9-5-9 5 9 5z"
-          />
-        </svg>
-      ),
-      title: 'Tip 2',
-      description: 'Description for Tip 2',
-    },
-    {
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          className="w-6 h-6"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M12 14l9-5-9-5-9 5 9 5z"
-          />
-        </svg>
-      ),
-      title: 'Tip 3',
-      description: 'Description for Tip 3',
-    },
-  ];
+    const tips = [
+        {
+          icon: (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 14l9-5-9-5-9 5 9 5z"
+              />
+            </svg>
+          ),
+          title: 'Tailor Your Resume for Japanese Employers',
+          description: 'Learn how to customize your resume to match the preferences of Japanese employers.',
+        },
+        {
+          icon: (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 14l9-5-9-5-9 5 9 5z"
+              />
+            </svg>
+          ),
+          title: 'Highlight Relevant Language Skills',
+          description: 'Discover how to showcase your Japanese language proficiency on your resume.',
+        },
+        {
+          icon: (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 14l9-5-9-5-9 5 9 5z"
+              />
+            </svg>
+          ),
+          title: 'Emphasize Cultural Adaptability',
+          description: 'Learn how to demonstrate your ability to adapt to Japanese work culture on your resume.',
+        },
+      ];
+      
+      
 
   return (
     <div className="max-w-4xl mx-auto px-5 mt-16">

@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from "../../Pages/Footer";
 import { Review } from '../core/AboutUsComponents/Review';
 import { Counter } from '../core/AboutUsComponents/Counter';
+import HighlightText from '../core/HighLightText';
 export const AboutUs = () => {
   return (
     <div>
@@ -9,7 +10,7 @@ export const AboutUs = () => {
  <section class=" dark:bg-gray-900">
     <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
         <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">About Us</h2>
+            <h2 class="mb-4 text-4xl   text-white"><HighlightText text={"About"}/> Us</h2>
             <p class="mb-4">We Are Your Gateway to Exciting Opportunities in Japan
 At "Work Opportunities in Japan," we are passionate about connecting talented individuals with rewarding career prospects in Japan. Our mission is to bridge the gap between job seekers and employers, making the process of finding employment in Japan streamlined and efficient.</p>
             <p>We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick.</p>
