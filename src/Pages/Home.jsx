@@ -4,10 +4,11 @@ import HighlightText from '../Components/core/HighLightText';
 import { Companies } from '../Components/HomePage/Companies';
 import { ExploreJob } from '../Components/HomePage/ExploreJob';
 import { GetJobsAlert } from '../Components/HomePage/GetJobsAlert';
+import { FAQ } from '../Components/HomePage/FAQ';
 
 export const Home = () => {
   return (
-    <div className='w-full bg-blue-700 py-24'>
+    <div className='w-11/12 mx-auto bg-white py-24'>
       <div className=' md:max-w-[1480px] m-auto grid md:grid-cols-2 max-w-[500px]'>
         <div className=' 2 flex flex-col justify-start gap-4  md:mt-0 md:ml-32'>
           <p className='py-2 text-2xl text-white font-medium'>Unlock Your Future</p>
@@ -27,10 +28,14 @@ export const Home = () => {
           </div>
         </div>
         <img className='md:order-last  order-first ' src={heroImg} alt='Hero' />
-       
+      
       </div>
-    <ExploreJob/>
-  
+      <div className='w-full'>
+          
+      <ExploreJob/>
+  <FAQ/>
+        </div>
+      
     </div>
    
   );

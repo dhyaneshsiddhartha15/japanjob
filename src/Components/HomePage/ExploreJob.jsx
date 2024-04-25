@@ -28,7 +28,7 @@ export const ExploreJob = () => {
                 key={index}
                 className="p-10 red w-full md:w-1/3 max-h-[300px] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200 hover:bg-red bg-white outline-double"
               >
-                <h3 className="font-mullish text-lg pt-4 text-green-700">{box.title}</h3>
+                <h3 className="font-mullish text-2xl pt-4 text-green-700">{box.title}</h3>
                 <p className="font-mullish py-3 text-grayText leading-normal">{box.description}</p>
               </div>
             ))}
@@ -40,7 +40,7 @@ export const ExploreJob = () => {
                 key={index}
                 className="p-10 red w-full md:w-1/3 max-h-[300px] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200 hover:bg-red bg-white outline-double"
               >
-                <h3 className="font-mullish text-lg pt-4 text-green-700">{box.title}</h3>
+                <h3 className="font-mullish text-2xl pt-4 text-green-700">{box.title}</h3>
                 <p className="font-mullish py-3 text-grayText leading-normal">{box.description}</p>
               </div>
             ))}
