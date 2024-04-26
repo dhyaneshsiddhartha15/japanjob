@@ -7,10 +7,11 @@ export const Blogs = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
     const url = 'https://newsapi.org/v2/top-headlines?' +
       'country=jp&' +
       'apiKey=766c3ecc68634e20ab85b350db2cce1f';
-    const req = new Request(url);
+    const req = new Request(proxyUrl + url);
 
     fetch(req)
       .then(response => response.json())
@@ -29,8 +30,8 @@ export const Blogs = () => {
     <>
       {loading && (
         <div class="flex justify-center items-center h-screen">
-        <div class="rounded-full h-20 w-20 bg-blue-800 animate-ping"></div>
-      </div>
+          <div class="rounded-full h-20 w-20 bg-blue-800 animate-ping"></div>
+        </div>
       )}
 
       <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
