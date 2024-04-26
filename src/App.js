@@ -12,6 +12,7 @@ import { Jobs } from "./Pages/Jobs";
 import { ContactUs } from "./Pages/ContactUs";
 import { Culture } from "./Pages/Culture";
 import { Blogs } from "./Pages/Blogs";
+import { JobsListing } from "./Pages/JobsListing";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/career" element={<Career />} />
-        <Route path="/jobs" element={<Jobs />} />
+        <Route path="/jobs" element={<JobsListing/>} />
         <Route path="/contact" element={<ContactUs/>} />
         <Route path="/blogs" element={<Blogs/>} />
         <Route path="/culture" element={<Culture/>} />

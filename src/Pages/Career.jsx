@@ -158,9 +158,6 @@ export const Career = () => {
         </div>
       </div>
       <ResumeTips />
-     
-      
-      
       <Footer />
     </>
   );

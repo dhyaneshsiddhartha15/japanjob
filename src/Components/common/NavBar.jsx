@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-
 export const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
@@ -30,7 +29,7 @@ export const Navbar = () => {
 
   return (
     <div className='gap-3 bg-gold-200 flex justify-between items-center h-20 w-full mx-auto px-4 text-black border border-indigo-800'>
-      <h1 className='w-full text-3xl font-bold text-[#00df9a]'>WOIJ</h1>
+      <h1 className='w-full text-3xl font-bold text-[#00df9a]'>JobInJapan</h1>
       <ul className='text-1xl hidden md:flex gap-6 mt-3 border-double p-2 px-4'>
         {navItems.map(item => (
           <li
