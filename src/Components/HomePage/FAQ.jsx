@@ -27,10 +27,10 @@ export const FAQ = () => {
   };
 
   return (
-    <div className="flex justify-center items-center w-full h-full">
+    <div className="flex flex-col justify-center items-center w-11/12 m-auto p-6 ">
       <div className="container w-11/12">
-        <h1 className="text-5xl font-bold mb-4 text-center p-9">Frequently <HighlightText text={"Asked"}/> Questions</h1>
-        <div className="divide-y divide-gray-200">
+        <h1 className="text-5xl  mb-4 text-center p-9">Frequently <HighlightText text={"Asked"}/> Questions</h1>
+        <div className="divide-y divide-gray-200 2">
           {faqs.map((faq, index) => (
             <div key={index} className="py-4">
               <div

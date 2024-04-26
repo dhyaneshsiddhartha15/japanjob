@@ -8,7 +8,8 @@ import { FAQ } from '../Components/HomePage/FAQ';
 
 export const Home = () => {
   return (
-    <div className='w-11/12 mx-auto bg-white py-24'>
+    <>
+     <div className='w-11/12 mx-auto bg-white py-24'>
       <div className=' md:max-w-[1480px] m-auto grid md:grid-cols-2 max-w-[500px]'>
         <div className=' 2 flex flex-col justify-start gap-4  md:mt-0 md:ml-32'>
           <p className='py-2 text-2xl text-white font-medium'>Unlock Your Future</p>
@@ -30,13 +31,16 @@ export const Home = () => {
         <img className='md:order-last  order-first ' src={heroImg} alt='Hero' />
       
       </div>
-      <div className='w-full'>
-          
+      </div>
       <ExploreJob/>
   <FAQ/>
-        </div>
+       
+    </>
+   
       
-    </div>
+    
+      
+    
    
   );
 };
