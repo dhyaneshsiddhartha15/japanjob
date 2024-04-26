@@ -3,6 +3,7 @@ import Footer from './Footer';
 import { ResumeTips } from '../Components/core/CareerAdvice/ResumeTips';
 import HighlightText from '../Components/core/HighLightText';
 
+
 export const Career = () => {
   return (
     <>
@@ -157,6 +158,9 @@ export const Career = () => {
         </div>
       </div>
       <ResumeTips />
+     
+      
+      
       <Footer />
     </>
   );

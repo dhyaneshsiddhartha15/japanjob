@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './Footer';
 
 export const ContactUs = () => {
   return (
@@ -48,6 +49,7 @@ export const ContactUs = () => {
             </div>
           </div>
         </section>
+        <Footer/>
       </div>
     </>
   );

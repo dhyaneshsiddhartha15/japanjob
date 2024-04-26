@@ -24,7 +24,8 @@ export const Navbar = () => {
     { id: 3, text: 'Jobs', path: '/jobs' },
     { id: 4, text: 'Career', path: '/career' },
     { id: 5, text: 'Culture', path: '/culture' },
-    { id: 6, text: 'Contact', path: '/contact' },
+    { id: 6, text: 'Blogs', path: '/blogs' },
+    { id: 7, text: 'Contact', path: '/contact' },
   ];
 
   return (

@@ -11,6 +11,7 @@ import { Career } from "./Pages/Career";
 import { Jobs } from "./Pages/Jobs";
 import { ContactUs } from "./Pages/ContactUs";
 import { Culture } from "./Pages/Culture";
+import { Blogs } from "./Pages/Blogs";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/career" element={<Career />} />
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/contact" element={<ContactUs/>} />
+        <Route path="/blogs" element={<Blogs/>} />
         <Route path="/culture" element={<Culture/>} />
       </Routes>
       <Routes>
