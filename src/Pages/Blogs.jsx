@@ -10,8 +10,9 @@ export const Blogs = () => {
   useEffect(() => {
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
     const url = 'https://newsapi.org/v2/top-headlines?' +
-      'country=jp&' +
-      'apiKey=766c3ecc68634e20ab85b350db2cce1f';
+    'country=jp&' +
+    'apiKey=766c3ecc68634e20ab85b350db2cce1f';
+  
     const req = new Request(proxyUrl + url);
 
     fetch(req)
