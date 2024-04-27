@@ -13,7 +13,7 @@ export const JobsListing = () => {
   const [searchQuery, setSearchQuery] = useState('Engineer');
   const [currentPage, setCurrentPage] = useState(1);
   const [jobsPerPage] = useState(5);
-  const api_key= process.env.JOB_API;
+  const api_key = process.env.REACT_APP_JOB_API_KEY;
   useEffect(() => {
     const fetchJobListings = async () => {
       if (!searchQuery) {
