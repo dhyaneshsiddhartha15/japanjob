@@ -12,7 +12,7 @@ export const Culture = () => {
     <>
       <div className="max-w-4xl mx-auto px-5 mt-16">
         <div className="text-center">
-          <h2 className="font-semibold text-7xl p-2 space-y-0.5 sm:text-7xl">Understanding the   <HighlightText text={" Japanese "} /> Work  Culture </h2>
+          <h2 className="font-semibold text-5xl p-2 space-y-0.5 sm:text-7xl">Understanding the   <HighlightText text={" Japanese "} /> Work  Culture </h2>
           <p className="max-w-md mx-auto mt-2 text-gray-500">Explore the nuances of Japan's unique work environment.</p>
         </div>
         <div>

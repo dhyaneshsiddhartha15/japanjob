@@ -13,7 +13,7 @@ export const JobsListing = () => {
   const [searchQuery, setSearchQuery] = useState('Engineer');
   const [currentPage, setCurrentPage] = useState(1);
   const [jobsPerPage] = useState(5);
-
+  const api_key= process.env.REACT_APP_JOB_API_KEY;
   useEffect(() => {
     const fetchJobListings = async () => {
       if (!searchQuery) {
@@ -21,8 +21,6 @@ export const JobsListing = () => {
         setLoading(false);
         return;
       }
-
-      const api_key = "nBdsRXhhjn3rWFsmxRqLyP63"; 
       const location = "Japan";
       const engine = "google_jobs";
       const startIndex = (currentPage - 1) * jobsPerPage;

@@ -8,10 +8,9 @@ export const Blogs = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const url = 'https://newsapi.org/v2/top-headlines?' +
-      'country=jp&' +
-      'apiKey=766c3ecc68634e20ab85b350db2cce1f';
-  
+    const apiKey = process.env.REACT_APP_NEWS_API_KEY;
+    const url = `https://newsapi.org/v2/top-headlines?country=jp&apiKey=${apiKey}`;
+
     fetch(url)
       .then(response => {
         if (!response.ok) {
@@ -30,7 +29,6 @@ export const Blogs = () => {
         setLoading(false);
       });
   }, []);
-  
 
   return (
     <>
