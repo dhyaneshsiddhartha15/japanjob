@@ -26,7 +26,7 @@ export const JobsListing = () => {
       const engine = "google_jobs";
       const startIndex = (currentPage - 1) * jobsPerPage;
       const endIndex = startIndex + jobsPerPage;
-      const baseUrl = `https://www.searchapi.io/api/v1/search?api_key=${api_key}&engine=${engine}&location=${location}&q=${encodeURIComponent(searchQuery)}`;
+      const baseUrl = `https://japanjob.vercel.app/api/v1/search?api_key=${api_key}&engine=${engine}&location=${location}&q=${encodeURIComponent(searchQuery)}`;
 
 
       const headers = {
