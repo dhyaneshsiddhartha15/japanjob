@@ -14,6 +14,7 @@ export const JobsListing = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [jobsPerPage] = useState(5);
   const api_key = process.env.REACT_APP_JOB_API_KEY;
+
   useEffect(() => {
     const fetchJobListings = async () => {
       if (!searchQuery) {
@@ -27,10 +28,16 @@ export const JobsListing = () => {
       const endIndex = startIndex + jobsPerPage;
       const baseUrl = `/api/v1/search?api_key=${api_key}&engine=${engine}&location=${location}&q=${encodeURIComponent(searchQuery)}`;
 
+      const headers = {
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        Pragma: 'no-cache',
+        Expires: 0
+      };
+
       try {
-        const response = await axios.get(baseUrl);
+        const response = await axios.get(baseUrl, { headers });
         console.log(response);
-        const jobs = response.data.jobs || [];
+        const jobs = response.data?.jobs || [];
         setJobListings(jobs.slice(startIndex, endIndex));
       } catch (error) {
         console.error('Error fetching job listings:', error);
@@ -52,8 +59,8 @@ export const JobsListing = () => {
     setCurrentPage(pageNumber);
   };
 
-  if (loading) return  <div class="flex justify-center items-center h-screen">
-  <div class="rounded-full h-20 w-20 bg-blue-800 animate-ping"></div>
+  if (loading) return  <div className="flex justify-center items-center h-screen">
+  <div className="rounded-full h-20 w-20 bg-blue-800 animate-ping"></div>
 </div>;
   if (error) return <p>Error: {error.message}</p>;
 
