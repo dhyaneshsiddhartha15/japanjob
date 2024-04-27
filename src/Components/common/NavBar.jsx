@@ -51,15 +51,15 @@ export const Navbar = () => {
       <ul
         className={
           nav
-            ? 'fixed md:hidden left-0 top-0 w-[60%] h-full bg-blue-700 ease-in-out duration-500'
+            ? 'fixed md:hidden left-0 top-0 w-[60%] h-full bg-gray-200 ease-in-out duration-500'
             : 'ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%]'
         }
       >
-        <h1 className='w-full text-3xl font-bold text-[#00df9a] m-4'>WOIJ.</h1>
+        <h1 className='w-full text-3xl font-bold text-[#00df9a] m-4'>JobInJapan</h1>
         {navItems.map(item => (
           <li
             key={item.id}
-            className='p-4 hover:bg-[#00df9a] hover:text-black cursor-pointer border-gray-600 border-b rounded-xl duration-300'
+            className='p-4 hover:bg-blue-400 hover:text-black cursor-pointer border-gray-600 border-b rounded-xl duration-300'
           >
             <Link to={item.path}>{item.text}</Link>
           </li>

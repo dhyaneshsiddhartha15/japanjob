@@ -29,6 +29,7 @@ export const JobsListing = () => {
 
       try {
         const response = await axios.get(baseUrl);
+        console.log(response);
         const jobs = response.data.jobs || [];
         setJobListings(jobs.slice(startIndex, endIndex));
       } catch (error) {
