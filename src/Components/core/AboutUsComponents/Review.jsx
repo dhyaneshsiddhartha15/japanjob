@@ -5,37 +5,37 @@ const testimonials = [
     name: 'Sakura Yamamoto',
     role: 'Software Engineer',
     location: 'Osaka',
-    message: "I'm grateful to JAPANDEV for helping me secure a job in Osaka!",
+    message: "I'm grateful to JapanCareers for helping me secure a job in Osaka!",
   },
   {
     name: 'Hiroshi Tanaka',
     role: 'UI/UX Designer',
     location: 'Tokyo',
-    message: "I'm grateful to JAPANDEV for helping me secure a job in Tokyo!",
+    message: "I'm grateful to JapanCareers for helping me secure a job in Tokyo!",
   },
   {
     name: 'Riko Suzuki',
     role: 'Project Manager',
     location: 'Kyoto',
-    message: "I'm grateful to JAPANDEV for helping me secure a job in Kyoto!",
+    message: "I'm grateful to JapanCareers for helping me secure a job in Kyoto!",
   },
   {
     name: 'Takumi Sato',
     role: 'Software Developer',
     location: 'Nagoya',
-    message: "I'm grateful to JAPANDEV for helping me secure a job in Nagoya!",
+    message: "I'm grateful to JapanCareers for helping me secure a job in Nagoya!",
   },
   {
     name: 'Aoi Tanaka',
     role: 'Web Developer',
     location: 'Hiroshima',
-    message: "I'm grateful to JAPANDEV for helping me secure a job in Hiroshima!",
+    message: "I'm grateful to JapanCareers for helping me secure a job in Hiroshima!",
   },
   {
     name: 'Yuto Suzuki',
     role: 'Software Engineer',
     location: 'Fukuoka',
-    message: "I'm grateful to JAPANDEV for helping me secure a job in Fukuoka!",
+    message: "I'm grateful to JapanCareers for helping me secure a job in Fukuoka!",
   },
 ];
 
