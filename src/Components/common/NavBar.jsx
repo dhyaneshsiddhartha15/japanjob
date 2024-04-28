@@ -29,7 +29,7 @@ export const Navbar = () => {
 
   return (
     <div className='gap-3 bg-gold-200 flex justify-between items-center h-20 w-full mx-auto px-4 text-black border border-indigo-800'>
-      <h1 className='w-full text-3xl font-bold text-[#00df9a]'>JobInJapan</h1>
+      <h1 className='w-full text-3xl font-bold text-[#00df9a]'>JapanCareers</h1>
       <ul className='text-1xl hidden md:flex gap-6 mt-3 border-double p-2 px-4'>
         {navItems.map(item => (
           <li
@@ -55,7 +55,7 @@ export const Navbar = () => {
             : 'ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%]'
         }
       >
-        <h1 className='w-full text-3xl font-bold text-[#00df9a] m-4'>JobInJapan</h1>
+        <h1 className='w-full text-3xl font-bold text-[#00df9a] m-4'>JapanCareers</h1>
         {navItems.map(item => (
           <li
             key={item.id}
