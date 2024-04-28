@@ -18,7 +18,7 @@ export const ExploreJob = () => {
     <div>
       <section className='w-11/12 ml-auto  py-24'>
         <div className="   h-full relative w-11/12 max-w-[2000px] mx-auto pt-4 gap-4">
-          <div className=' md:text-7xl flex justify-center items-center gap-3 p-16 mr-48 sm:flex flex-row text-5xl'>
+          <div className='md:text-7xl  items-center gap-3 justify-center  p-14 mr-48 sm:flex flex-row text-5xl'>
            Explore <HighlightText text={"Jobs"}/> by Category
           </div>
 
