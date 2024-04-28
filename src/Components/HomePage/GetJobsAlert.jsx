@@ -2,8 +2,8 @@ import React from 'react';
 
 export const GetJobsAlert = () => {
   return (
-    <div className='w-full bg-blue-700 py-14 justify-center items-center'>
-      <div className='md:max-w-[1480px] m-auto grid md:grid-cols-2 max-w-[500px]'>
+    <div className='w-full bg-blue-700 py-12 justify-center items-center'>
+      <div className='md:max-w-[1480px] m-auto grid md:grid-cols-2 max-w-[500px] ml-2'>
         <div className='flex flex-col justify-start gap-4 md:mt-0 md:ml-32'>
           <p className='py-2 text-4xl text-white font-medium'>Get Jobs Alert</p>
           <p className='py-2 text-base text-gray-300'>Stay updated with the latest job opportunities in Japan. Subscribe to our job alerts and be the first to know about new openings in your field.</p>
