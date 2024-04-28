@@ -11,6 +11,8 @@ export default async function handler(req, res) {
     try {
       const response = await fetch(baseUrl);
       const data = await response.json();
+      console.log(response);
+      console.log(data);
       const jobs = data?.jobs || [];
       res.status(200).json(jobs.slice(startIndex, endIndex));
     } catch (error) {
