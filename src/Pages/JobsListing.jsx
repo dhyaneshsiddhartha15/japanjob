@@ -1,27 +1,20 @@
-// JobsListing.jsx
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Jobs } from './Jobs';
 import HighlightText from '../Components/core/HighLightText';
 import Footer from "./Footer";
 
-// JobsListing component
 export const JobsListing = () => {
   const [jobListings, setJobListings] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [searchQuery, setSearchQuery] = useState('Engineer');
+  const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const [jobsPerPage] = useState(5);
 
   useEffect(() => {
     const fetchJobListings = async () => {
-      if (!searchQuery) {
-        setJobListings([]);
-        setLoading(false);
-        return;
-      }
-
+      setLoading(true);
       try {
         const response = await axios.get('/api/search-api', {
           params: { searchQuery, currentPage, jobsPerPage },
@@ -29,9 +22,8 @@ export const JobsListing = () => {
         setJobListings(response.data);
       } catch (error) {
         console.error('Error fetching job listings:', error);
-        setError(error);
+        setError('Failed to fetch job listings. Please try again later.');
       }
-
       setLoading(false);
     };
 
@@ -50,7 +42,7 @@ export const JobsListing = () => {
   if (loading) return <div className="flex justify-center items-center h-screen">
     <div className="rounded-full h-20 w-20 bg-blue-800 animate-ping"></div>
   </div>;
-  if (error) return <p>Error: {error.message}</p>;
+  if (error) return <p>{error}</p>;
 
   return (
     <>
@@ -69,7 +61,7 @@ export const JobsListing = () => {
         <div>
           <p className='text-xl'>Total Jobs: {jobListings.length}</p>
           <ul className='border-double'>
-            {jobListings.map(job => (
+            {Array.isArray(jobListings) && jobListings.map(job => (
               <li key={job.position} className="border-b border-black py-4 hover:shadow-2xl">
                 <div className="flex items-center justify-between">
                   <div>
