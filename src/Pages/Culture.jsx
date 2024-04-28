@@ -7,6 +7,7 @@ import { CTAButton } from '../Components/core/CTAButton';
 import { RewardsInJapan } from '../Components/core/CulturePage/RewardsInJapan';
 import { Opportunities } from '../Components/core/CulturePage/Opportunities';
 
+
 export const Culture = () => {
   return (
     <>
@@ -35,6 +36,7 @@ export const Culture = () => {
       <RewardsInJapan/>
       <Opportunities/>
       <Footer />
+     
       
     </>
   );

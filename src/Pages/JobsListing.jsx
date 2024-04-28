@@ -1,4 +1,4 @@
-// Import statements
+// JobsListing.jsx
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Jobs } from './Jobs';
@@ -13,33 +13,20 @@ export const JobsListing = () => {
   const [searchQuery, setSearchQuery] = useState('Engineer');
   const [currentPage, setCurrentPage] = useState(1);
   const [jobsPerPage] = useState(5);
-  const api_key = process.env.REACT_APP_JOB_API_KEY;
 
   useEffect(() => {
     const fetchJobListings = async () => {
       if (!searchQuery) {
-        setJobListings([]); 
+        setJobListings([]);
         setLoading(false);
         return;
       }
-      const location = "Japan";
-      const engine = "google_jobs";
-      const startIndex = (currentPage - 1) * jobsPerPage;
-      const endIndex = startIndex + jobsPerPage;
-      const baseUrl = `https://japanjob.vercel.app/api/v1/search?api_key=${api_key}&engine=${engine}&location=${location}&q=${encodeURIComponent(searchQuery)}`;
-
-
-      const headers = {
-        'Cache-Control': 'no-cache, no-store, must-revalidate',
-        Pragma: 'no-cache',
-        Expires: 0
-      };
 
       try {
-        const response = await axios.get(baseUrl, { headers });
-        console.log(response);
-        const jobs = response.data?.jobs || [];
-        setJobListings(jobs.slice(startIndex, endIndex));
+        const response = await axios.get('/api/search-api', {
+          params: { searchQuery, currentPage, jobsPerPage },
+        });
+        setJobListings(response.data);
       } catch (error) {
         console.error('Error fetching job listings:', error);
         setError(error);
@@ -60,9 +47,9 @@ export const JobsListing = () => {
     setCurrentPage(pageNumber);
   };
 
-  if (loading) return  <div className="flex justify-center items-center h-screen">
-  <div className="rounded-full h-20 w-20 bg-blue-800 animate-ping"></div>
-</div>;
+  if (loading) return <div className="flex justify-center items-center h-screen">
+    <div className="rounded-full h-20 w-20 bg-blue-800 animate-ping"></div>
+  </div>;
   if (error) return <p>Error: {error.message}</p>;
 
   return (
