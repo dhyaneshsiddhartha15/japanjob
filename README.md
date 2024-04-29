@@ -82,7 +82,14 @@ JapanCareers/
 ## Issue with Google Search API
 
 The JobListing component uses the Google Search API to fetch job listings. However, the API is currently expired and does not allow requests due to CORS policy restrictions. To resolve this issue, you will need to renew the API key or use a different API that supports CORS.
-
-``` 
-
-Feel free to customize the README further based on additional information about your project or any other updates you'd like to include.
+##Dep
+Installed Packages:
+-------------------
+- react
+- react-router-dom
+- react-intl 
+- axios
+- tailwindcss
+- react-icons
+- webpack
+-sb
