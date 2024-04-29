@@ -92,4 +92,16 @@ Installed Packages:
 - tailwindcss
 - react-icons
 - webpack
--sb
+## Deployment
+
+The project is deployed using Vercel. To deploy the project, the `npm run build` command was used.
+
+```bash
+npm run build
+```
+
+The deployment process through Vercel ensures that the latest changes from the `main` branch are automatically deployed and hosted.
+
+---
+
+
