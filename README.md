@@ -1,31 +1,88 @@
-# React & Tailwind CSS Starter Pack
+# JapanCareers
 
-This is a starter pack for creating React projects with Tailwind CSS configured. It uses React version **18.2** and Tailwind CSS version **3.2**.
+JapanCareers is a website dedicated to providing information about job opportunities, career advice, and Japanese work culture. This project is built using React and Tailwind CSS.
 
-## Usage
+## Features
 
-This starter pack includes a basic setup for using **Tailwind CSS with React**. To start building your own components and styles, follow these steps:
+- Home: Landing page with an overview of the website.
+- About: Information about the purpose and goals of JapanCareers.
+- Jobs: Job listings for various positions in Japan.
+- Career: Career advice section with tips and strategies.
+- Culture: Insights into Japanese work culture.
+- Blogs: Articles and posts related to work opportunities in Japan.
+- Contact: Contact form to get in touch with the JapanCareers team.
 
-1. Clone the repository to your local machine.
-    ```sh
-    git clone https://github.com/thepranaygupta/react-tailwind-css-starter-pack.git
-    ```
+## Installation
 
-1. Install the required packages.
-    ```sh
-    cd react-tailwind-css-starter-pack
-    npm install
-    ```
+To run this project locally, follow these steps:
 
-1. Start the development server.
-    ```sh
-    npm start
-    ```
-1. Open the project in your browser at [`http://localhost:3000`](http://localhost:3000) to view your project.
-1. Create your React components and add your styles using Tailwind classes. You can also create new CSS files and import them into your components.
-
-The project is set up to use `postcss-cli` to process your CSS files. You can add your own `tailwind.config.js` file to customize your Tailwind setup.
+1. Clone the repository: `git clone https://github.com/your-username/JapanCareers.git`
+2. Navigate to the project directory: `cd JapanCareers`
+3. Install dependencies: `npm install`
+4. Start the development server: `npm start`
 
 ## Contributing
 
-Contributions are welcome! If you have any suggestions or find any issues, please feel free to open an issue or a pull request.
+Contributions are welcome! If you'd like to contribute to JapanCareers, please follow these guidelines:
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/my-feature`
+3. Make your changes and commit them: `git commit -am 'Add my feature'`
+4. Push to the branch: `git push origin feature/my-feature`
+5. Submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+## Folder Structure
+
+```
+JapanCareers/
+├── src/
+│   ├── api/
+│   │   └── search-api.js
+│   ├── assets/
+│   │   └── images/
+│   ├── components/
+│   │   ├── common/
+│   │   │   └── Navbar.js
+│   │   └── core/
+│   │       ├── AboutUsComponent/
+│   │       │   ├── Counter.jsx
+│   │       │   └── Review.jsx
+│   │       ├── CareerAdvice/
+│   │       │   └── ResumeTips.jsx
+│   │       ├── CulturePage/
+│   │       │   ├── JapanWork.jsx
+│   │       │   ├── Opportunity.jsx
+│   │       │   └── RewardsInJapan.jsx
+│   │       ├── CTAButton.jsx
+│   │       └── HighlightText.js
+│   │   └── HomePage/
+│   │       ├── About.jsx
+│   │       ├── Companies.jsx
+│   │       ├── ExploreJob.jsx
+│   │       ├── FAQ.jsx
+│   │       └── GetJobAlert.jsx
+│   ├── pages/
+│   │   ├── Blog.jsx
+│   │   ├── Career.jsx
+│   │   ├── ContactUs.jsx
+│   │   ├── Culture.jsx
+│   │   ├── Home.jsx
+│   │   └── JobListing.jsx
+│   ├── LanguageContext.js
+│   ├── index.js
+│   ├── translations.js
+│   └── app.css
+```
+
+## Issue with Google Search API
+
+The JobListing component uses the Google Search API to fetch job listings. However, the API is currently expired and does not allow requests due to CORS policy restrictions. To resolve this issue, you will need to renew the API key or use a different API that supports CORS.
+
+``` 
+
+Feel free to customize the README further based on additional information about your project or any other updates you'd like to include.
