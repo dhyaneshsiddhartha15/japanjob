@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../../LanguageContext';
+import { FormattedMessage } from 'react-intl';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+
 export const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
+  const { toggleLanguage } = useLanguage();
 
   const handleNav = () => {
     setNav(!nav);
@@ -29,8 +33,13 @@ export const Navbar = () => {
 
   return (
     <div className='gap-3 bg-gold-200 flex justify-between items-center h-20 w-full mx-auto px-4 text-black border border-indigo-800'>
-      <h1 className='w-full text-3xl font-bold text-[#00df9a]'>JapanCareers</h1>
+      <h1 className='w-full text-3xl font-bold text-[#00df9a]'>JapanCareers
+       
+      </h1>
+      
       <ul className='text-1xl hidden md:flex gap-6 mt-3 border-double p-2 px-4'>
+     
+
         {navItems.map(item => (
           <li
             key={item.id}
@@ -44,8 +53,12 @@ export const Navbar = () => {
             )}
           </li>
         ))}
+         <div className='text-bold bg-blue-400 rounded-md w-20 flex justify-center items-center'>
+  <button onClick={toggleLanguage}><FormattedMessage id="toggleLanguageButton" defaultMessage="Lang" /></button>
+</div>
       </ul>
       <div onClick={handleNav} className='block md:hidden'>
+      
         {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
       </div>
       <ul
@@ -64,6 +77,9 @@ export const Navbar = () => {
             <Link to={item.path}>{item.text}</Link>
           </li>
         ))}
+        <div className='text-bold bg-blue-400 rounded-md w-full h-11 flex justify-center items-center'>
+  <button onClick={toggleLanguage}><FormattedMessage id="toggleLanguageButton" defaultMessage="Lang" /></button>
+</div>
       </ul>
     </div>
   );

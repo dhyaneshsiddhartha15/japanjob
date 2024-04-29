@@ -16,7 +16,6 @@ export const Companies = () => {
           Over 25,000 teams around the world rely on our platform for job skills
         </p>
         <div className='flex flex-wrap justify-center items-center gap-8 mt-8'>
-          {/* Add images of company logos here */}
           <img src={logo1} alt='Company Logo' className='h-12' />
           <img src={logo2} alt='Company Logo' className='h-12' />
           <img src={logo3} alt='Company Logo' className='h-12' />

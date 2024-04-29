@@ -13,7 +13,6 @@ import { ContactUs } from "./Pages/ContactUs";
 import { Culture } from "./Pages/Culture";
 import { Blogs } from "./Pages/Blogs";
 import { JobsListing } from "./Pages/JobsListing";
-
 function App() {
   return (
     <div>

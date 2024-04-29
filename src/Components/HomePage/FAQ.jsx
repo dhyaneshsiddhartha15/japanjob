@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FormattedMessage } from 'react-intl';
 import HighlightText from '../core/HighLightText';
 
 export const FAQ = () => {
@@ -6,19 +7,19 @@ export const FAQ = () => {
 
   const faqs = [
     {
-      question: 'What is the cost of living in Japan?',
+      question: 'faq.costOfLiving',
       answer:
-        'The cost of living in Japan varies depending on the city and lifestyle. On average, you can expect to spend around $1,000 to $2,000 per month on rent, food, transportation, and other expenses.',
+        'faq.costOfLivingAnswer',
     },
     {
-      question: 'Is it difficult to find a job in Japan as a foreigner?',
+      question: 'faq.findJobDifficulty',
       answer:
-        'Finding a job in Japan as a foreigner can be challenging, but it is not impossible. It is essential to have a strong grasp of the Japanese language and understand the cultural nuances of the job market.',
+        'faq.findJobDifficultyAnswer',
     },
     {
-      question: 'What types of jobs are available in Japan?',
+      question: 'faq.availableJobs',
       answer:
-        'There is a wide range of job opportunities available in Japan, including positions in IT, engineering, finance, education, and more. The key is to find a job that aligns with your skills and interests.',
+        'faq.availableJobsAnswer',
     },
   ];
 
@@ -29,7 +30,9 @@ export const FAQ = () => {
   return (
     <div className="flex flex-col justify-center items-center w-11/12 m-auto p-6 ">
       <div className="container w-11/12">
-        <h1 className="text-5xl  mb-4 text-center p-9">Frequently <HighlightText text={"Asked"}/> Questions</h1>
+        <h1 className="text-5xl  mb-4 text-center p-9">
+          <FormattedMessage id="home.frequentlyAskedQuestions" defaultMessage="Frequently Asked Questions" />
+        </h1>
         <div className="divide-y divide-gray-200 2">
           {faqs.map((faq, index) => (
             <div key={index} className="py-4">
@@ -37,7 +40,9 @@ export const FAQ = () => {
                 className="flex justify-between items-center cursor-pointer"
                 onClick={() => toggleActive(index)}
               >
-                <h2 className="text-lg font-medium">{faq.question}</h2>
+                <h2 className="text-lg font-medium">
+                  <FormattedMessage id={faq.question} defaultMessage={faq.question} />
+                </h2>
                 <svg
                   className={`w-6 h-6 transition-transform transform ${
                     activeIndex === index ? 'rotate-90' : ''
@@ -60,7 +65,9 @@ export const FAQ = () => {
                 </svg>
               </div>
               {activeIndex === index && (
-                <p className="mt-2 text-gray-600">{faq.answer}</p>
+                <p className="mt-2 text-gray-600">
+                  <FormattedMessage id={faq.answer} defaultMessage={faq.answer} />
+                </p>
               )}
             </div>
           ))}
